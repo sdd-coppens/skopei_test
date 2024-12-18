@@ -151,5 +151,6 @@ void delete_hashmap(HashMap * hm, DestroyDataCallback destroy_data) {
 			free(prev_bucket);
 		}
 	}
+	free(hm->buckets);
 	free(hm);
 }
